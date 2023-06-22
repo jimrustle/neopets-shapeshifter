@@ -15,6 +15,7 @@ tiles = [[0, 1, 2],
 
 # define board size
 board_size = 6
+nstates = 2
 
 # apply tiles to board
 board = [1 for i in range(6**2)]
@@ -23,7 +24,8 @@ for tile in tiles:
     position = random.randint(0, board_size**2 - 1 - tile[-1])
     print(position)
     for idx in tile:
-        board[position + idx] ^= 1
+        board[position + idx] += 1
+        board[position + idx] %= nstates
 
 # print output
 print('-----')
