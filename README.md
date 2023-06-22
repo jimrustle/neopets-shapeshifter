@@ -40,16 +40,16 @@ I can’t see how these puzzles could, realistically, ger much harder. I’m beg
 
 # Blog posts:
 
-https://shummie.wordpress.com/2009/08/04/shapeshifting/
-https://shewhoshapes.wordpress.com/2007/08/02/more-on-kvhos-ss-shapeshifter-solver/
-https://shewhoshapes.wordpress.com/2007/08/04/kvho-wins-what-next/
+- https://shummie.wordpress.com/2009/08/04/shapeshifting/
+- https://shewhoshapes.wordpress.com/2007/08/02/more-on-kvhos-ss-shapeshifter-solver/
+- https://shewhoshapes.wordpress.com/2007/08/04/kvho-wins-what-next/
 
 # Other solvers:
 
-http://web.eecs.utk.edu/~jplank/plank/classes/cs140/Labs/Lab9/
-https://github.com/dzou/ShapeShifterSolver
-https://clraik.com/forum/downloads.php?do=file&id=105
-https://github.com/diceroll123/shapeshiftersolver
+- http://web.eecs.utk.edu/~jplank/plank/classes/cs140/Labs/Lab9/
+- https://github.com/dzou/ShapeShifterSolver
+- https://clraik.com/forum/downloads.php?do=file&id=105
+- https://github.com/diceroll123/shapeshiftersolver
 
 # Mathematics:
 https://www.jaapsch.net/puzzles/lomath.htm
