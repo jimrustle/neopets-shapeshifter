@@ -13,6 +13,31 @@ Resources for solving Neopets' shapeshifter puzzles
 1 directory, 4 files
 ```
 
+Level notes:
+https://www.jellyneo.net/?go=shapeshifter
+
+```
+Ot at the very least, an extra check that could perhaps save some time. I need to put in a test to see how often the check would fire. Maybe it never does… maybe it happens a lot.
+
+ If you took the total area of all pieces and from that subtracted the difference of the initial board from the pristine board, you would have the product of the total number of “flips” — pieces that go past the goal piece back to the first piece and then eventually back to the goal piece again — times the depth of the board. So divinde by the depth to get the total number of flips.
+
+So, the optimization, is to keep a running count of how many flips have been performed. If a potential move would put it over the limit — it’s a bad move and will not lead to a solvable board. Combined with my original pruner (area of remaining pieces minus the difference of the board must be greater than or equal to zero and a multiple of the board depth), this may make the current generation of boards solvable in a reasonable amount of time.
+
+(This can be eyeballed by saying that N has to be the same or smaller than its parent. That is easy and doesn’t require a new ‘C’ routine or having to return a tuple from place()… omg… if this works… my pen-and-paper test says it can… so exciting. But I’ve been excited by duds before 😦 )
+
+I can’t see how these puzzles could, realistically, ger much harder. I’m beginning to think the top scorers are solving them by hand; maybe they are just that intuitive.
+
+-- shapeshifter 2007-05-30 at 18:40
+```
+
+# Performance Notes
+
+| level | khvo speed | python speed |
+|-------|------------|--------------|
+| 26    |            |              |
+| 27    | 880 us     | 17m 9s       |
+| 28    |            |              |
+
 # Blog posts:
 
 https://shummie.wordpress.com/2009/08/04/shapeshifting/

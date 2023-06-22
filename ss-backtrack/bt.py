@@ -2,32 +2,38 @@ import copy
 
 solution = []
 
+depth = 3
+
 # levels are defined as lists of rows,
 # len(level) = number of rows (y-dimension)
 # len(level[1]) = number of columns (x-dimension)
-level = [[1, 0, 1], [1, 0, 1], [0, 0, 1]]
+level = [[2, 1, 0, 1], [2,2,0,1], [2,2,1,2], [1,2,0,1]]
 
-shapes = [[[0, 1, 1], [1, 1, 1]],
-          [[1]],
-          [[1,1], [1,1], [1,1]],
-          [[1]],
-          [[0,1], [1,1]],
-          [[1], [1]],
-          [[1, 0], [1,1], [1,0]],
-          [[1], [1]]]
+shapes = [[[1,0,1],[1,1,1]],
+        [[0,1],[1,1],[0,1]],
+        [[0,1,1], [0,1,1], [1,1,0]],
+        [[1,0,0], [1,1,1], [0,0,1]],
+        [[1,0,1], [1,0,1], [1,1,1]],
+        [[1,1,0], [0,1,0], [0,1,1]],
+        [[1,0,1], [1,0,1], [1,1,1]],
+        [[0,0,1], [0,0,1], [1,1,1]],
+        [[0,1,0], [1,1,1]],
+        [[1,1,1], [0,1,0], [1,1,1]],
+        [[1]],
+        [[1]]]
 
 def pprint(board):
     for y in board:
         print(''.join(map(str, y)))
     print('---')
 
-
 def apply_piece(shape, board, location):
     loc_x = location[0]
     loc_y = location[1]
     for (i, row) in enumerate(shape):
         for (j, column) in enumerate(row):
-            board[loc_y + i][loc_x + j] ^= column
+            board[loc_y + i][loc_x + j] += column
+            board[loc_y + i][loc_x + j] %= depth
 
 def placeable(shape, board, location):
     # shapes must be placed to fit the board,
@@ -42,8 +48,8 @@ def placeable(shape, board, location):
 
 def bt(board, pieces):
     # if board is all 0 and no pieces are left, it is solved
-    if sum(map(sum, board)) == len(board)**2 and len(pieces) == 0:
-        # print("solution found")
+    if sum(map(sum, board)) == len(board) * len(board[0] * (depth - 1)) and len(pieces) == 0:
+        print("solution found")
         return True
     if len(pieces) == 0:
         return False
