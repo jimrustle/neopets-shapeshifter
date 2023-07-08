@@ -5,8 +5,8 @@ def chunks(l, n):
     for i in range(0, len(l), n):
         yield l[i:i + n]
 
-def generate_tiles(n_tiles):
-    return sorted(set([random.randint(0, n_tiles - 1) for i in range(n_tiles)]))
+def generate_tiles(n_tiles, board_size):
+    return sorted(set([random.randint(0, board_size - 1) for i in range(n_tiles)]))
 
 def tile_width(tile, board_size):
     return max(map(lambda  x: (x % board_size) + 1, tile))
@@ -16,16 +16,16 @@ def allowable_pos(tile_width, position, board_size):
 
 # define tiles
 tiles = [[0, 1, 2],
-        [0, 1, 6, 7],
-        [0, 1, 2, 7],
-        [1, 6, 7, 8, 13],
-        [0, 1, 6, 12],
-        [0, 6, 7, 8, 9]]
+        [0, 1, 2, 3],
+        [0, 1, 4, 5]]
+        # [1, 6, 7, 8, 13],
+        # [0, 1, 6, 12],
+        # [0, 6, 7, 8, 9]]
 
-#tiles = [generate_tiles(10) for i in range(6)]
+# tiles = [generate_tiles(10, 36) for i in range(6)]
 
 # define board size
-board_size = 6
+board_size = 4
 nstates = 2
 
 # apply tiles to board
