@@ -63,14 +63,13 @@ def solve(game):
                 if placeable(pw, pl, game, position):
                     solution.append(position)
 
-                    saved = copy.deepcopy(board)
                     apply_piece(piece, board, position)
 
                     if bt(game, board, p[1:]):
                         return True
 
                     solution.pop()
-                    board = copy.deepcopy(saved)
+                    apply_piece(piece, board, position)
         return False
     if bt(game, game['board'], game['p']):
         return solution
@@ -84,4 +83,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # cProfile.run('main()')
 
