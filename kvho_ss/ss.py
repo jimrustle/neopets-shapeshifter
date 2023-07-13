@@ -31,11 +31,13 @@ def read_level(filename):
         game['p_x'] = p_x
         game['p_y'] = p_y
 
+        game['p'] = list(zip(pieces, p_x, p_y))
+
     return game
 
 def apply_piece(piece, board, position):
     nstates = 2
-    # print(piece, board, position)
+    # print("apply: ", piece, board, position)
     new = copy.deepcopy(board)
     for idx in piece:
         new[position + idx] += 1
@@ -53,36 +55,34 @@ def placeable(piece_w, piece_l, game, position):
 
 def solve(game):
     solution = []
-    def bt(game, board, r_pieces):
+    def bt(game, board, p):
         # if board is all 0 and no pieces are left, it is solved
-        if sum(board) == game['x'] * game['y'] * game['goal'] and len(r_pieces) == 0:
+        if sum(board) == game['x'] * game['y'] * game['goal'] and len(p) == 0:
             return True
-        if len(r_pieces) == 0:
+        if len(p) == 0:
             return False
-        for (p, pw, pl) in zip(r_pieces, game['p_x'], game['p_y']):
+        for (piece, pw, pl) in p:
             for position in range(game['x'] * game['y']):
                 if placeable(pw, pl, game, position):
                     solution.append(position)
 
                     saved = copy.deepcopy(board)
-                    board = apply_piece(p, saved, position)
+                    board = apply_piece(piece, saved, position)
 
-                    if bt(game, board, r_pieces[1:]):
+                    if bt(game, board, p[1:]):
                         return True
 
                     solution.pop()
                     board = copy.deepcopy(saved)
         return False
-    if bt(game, game['board'], game['pieces']):
+    if bt(game, game['board'], game['p']):
         return solution
     else:
         print("no solution")
         return False
 
 def main():
-    game = read_level('saved2')
-    #print(game)
-
+    game = read_level('saved3')
     print(solve(game))
 
 if __name__ == "__main__":
