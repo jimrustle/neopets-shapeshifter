@@ -37,12 +37,9 @@ def read_level(filename):
 
 def apply_piece(piece, board, position):
     nstates = 2
-    # print("apply: ", piece, board, position)
-    new = copy.deepcopy(board)
     for idx in piece:
-        new[position + idx] += 1
-        new[position + idx] %= nstates
-    return new
+        board[position + idx] += 1
+        board[position + idx] %= nstates
 
 def max_moves(game):
     moves = 1
@@ -67,7 +64,7 @@ def solve(game):
                     solution.append(position)
 
                     saved = copy.deepcopy(board)
-                    board = apply_piece(piece, saved, position)
+                    apply_piece(piece, board, position)
 
                     if bt(game, board, p[1:]):
                         return True
