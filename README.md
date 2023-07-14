@@ -46,12 +46,22 @@ I can’t see how these puzzles could, realistically, ger much harder. I’m beg
 
 # Other solvers:
 
+Neopets Shapeshifter:
 - http://web.eecs.utk.edu/~jplank/plank/classes/cs140/Labs/Lab9/
 - https://github.com/dzou/ShapeShifterSolver
 - https://clraik.com/forum/downloads.php?do=file&id=105
 - https://github.com/diceroll123/shapeshiftersolver
 
+Lights Out:
+- Archive of Interesting Code - Keith Schwarz https://www.keithschwarz.com/interesting/code/?dir=lights-out
+
 # Mathematics:
 https://www.jaapsch.net/puzzles/lomath.htm
 
+- The Game of Lights Out - Rebecca S. Meyer https://dc.ewu.edu/theses/167/
+- NUMBER OF SOLUTIONS TO THE LIGTHS OUT GAME - VICENTE MUNOZ (http://www.mat.ucm.es/~vmunozve/lights-out.pdf)
+- Modified Lights Out on Generalized Petersen Graphs - Jacob K Porter (Poster, AMS JMM 2023)
+- Barile, Margherita. "Lights Out Puzzle." From MathWorld--A Wolfram Web Resource, created by Eric W. Weisstein. https://mathworld.wolfram.com/LightsOutPuzzle.html
+- Lights Out: Solutions Using Linear Algebra - Matthew A. Madsen http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/references/MadsenLightsOut.pdf
+- Lights Out on graphs - Abraham Berman, Franziska Borer, Norbert Hungerbühler 10.1007/s00591-021-00297-5
 
