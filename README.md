@@ -59,6 +59,7 @@ Lights Out:
 https://www.jaapsch.net/puzzles/lomath.htm
 
 - The Game of Lights Out - Rebecca S. Meyer https://dc.ewu.edu/theses/167/
+- The Lights Out Game on Directed Graphs - Elise Dettling, Darren Parker https://arxiv.org/pdf/2306.06017.pdf
 - NUMBER OF SOLUTIONS TO THE LIGTHS OUT GAME - VICENTE MUNOZ (http://www.mat.ucm.es/~vmunozve/lights-out.pdf)
 - Modified Lights Out on Generalized Petersen Graphs - Jacob K Porter (Poster, AMS JMM 2023)
 - Barile, Margherita. "Lights Out Puzzle." From MathWorld--A Wolfram Web Resource, created by Eric W. Weisstein. https://mathworld.wolfram.com/LightsOutPuzzle.html
