@@ -188,3 +188,39 @@ else:
     print("No cycle found within the specified depth.")
 
 This example illustrates the process of constructing a graph based on state transitions and performing a depth-first search to find a cycle. For larger problems, you may need to implement more sophisticated search strategies, pruning techniques, and optimization methods to improve performance.
+
+
+Got it! In that case, you can define the `goal_configuration/1` predicate to check if all elements in the state array are equal to 1. Here's the updated Prolog code with this goal configuration:
+
+```prolog
+% Define the actions (shapes) and their effects on the state array
+apply_action(State, Index, Action, NewState) :-
+    nth0(Index, State, Value),
+    NewValue is (Value + Action) mod 2,
+    nth0(Index, NewState, NewValue).
+
+% Define the goal configuration
+goal_configuration(State) :-
+    maplist(=(1), State).  % Check if all elements in the state are 1
+
+% Define the main predicate for solving the problem
+solve(State, Actions) :-
+    goal_configuration(State),  % Check if the current state is the goal
+    Actions = [].               % No more actions needed, we are done
+
+solve(State, [Action | RestActions]) :-
+    apply_action(State, Index, Action, NewState),  % Apply the current action
+    solve(NewState, RestActions).                  % Recur with the new state
+
+% Example state and actions
+initial_state([0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1]).
+example_actions([[0, 1, 2], [0, 1, 2, 3], [0, 1, 4, 5]]).
+
+% Solve the problem for the example state and actions
+solve_example(State, Actions) :-
+    initial_state(InitialState),
+    example_actions(Actions),
+    solve(InitialState, Actions).
+```
+
+Now the `goal_configuration/1` predicate checks if all elements in the state array are equal to 1. You can use the `solve_example/2` predicate to solve the problem for your example state and actions. Just replace `example_actions/1` with your actual list of actions when using the code with your data.
