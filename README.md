@@ -87,6 +87,3 @@ https://www.jaapsch.net/puzzles/lomath.htm
 - Lights Out: Solutions Using Linear Algebra - Matthew A. Madsen http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/references/MadsenLightsOut.pdf
 - Lights Out on graphs - Abraham Berman, Franziska Borer, Norbert Hungerbühler 10.1007/s00591-021-00297-5
 
-# ChatGPT 3.5
-- I have added a chat gpt 3.5 log as a text file
-
