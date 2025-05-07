@@ -1,6 +1,8 @@
 import copy
 #import numpy as np
 
+import cProfile
+
 def read_level(filename):
     game = {}
     with open(filename, 'r') as f:
@@ -78,10 +80,10 @@ def solve(game):
         return False
 
 def main():
-    game = read_level('saved3')
+    game = read_level('saved2')
     print(solve(game))
 
 if __name__ == "__main__":
-    main()
-    # cProfile.run('main()')
+    #main()
+    cProfile.run('main()')
 

@@ -1,4 +1,7 @@
 #! /usr/bin/env perl
+# example if gauntlet and sword are your two icons
+# ./myshape.pl ShapeShifter.html gau swo > savefile
+# ./ss.c < savefile
 $ROWS=0;
 $row=0;
 $COLS=0;
