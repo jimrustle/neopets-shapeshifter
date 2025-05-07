@@ -3,7 +3,7 @@ Resources for solving Neopets' shapeshifter puzzles
 
 ```
 (special thanks to divvy for replying to my email about kvho -I'm hosting
-it here without permission just in case its lost to time)
+it here without permission just in case it's lost to time)
 .
 ├── kvho_ss
 │   ├── myshape.pl
@@ -71,6 +71,7 @@ Neopets Shapeshifter:
 - https://github.com/dzou/ShapeShifterSolver
 - https://clraik.com/forum/downloads.php?do=file&id=105
 - https://github.com/diceroll123/shapeshiftersolver
+- https://github.com/cxjdavin/cxjdavin.github.io/tree/master/files/for_fun/shapeshifter - Note: this one uses MiniZinc and Google's optimization tools, very neat
 
 Lights Out:
 - Archive of Interesting Code - Keith Schwarz https://www.keithschwarz.com/interesting/code/?dir=lights-out
